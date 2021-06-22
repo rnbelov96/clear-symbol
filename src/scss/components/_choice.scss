@@ -1,0 +1,100 @@
+.choice {
+  min-height: 688px;
+  background-position: center top;
+  background-repeat: no-repeat;
+  background-image: url('/src/img/bgs/choice-bg.png');
+  position: relative;
+  top: -265px;
+  margin-bottom: -265px;
+  z-index: -1;
+  padding-top: 333px;
+
+  @media (max-width: 575px) {
+    padding-top: 300px;
+  }
+}
+
+.choice__title {
+  @include title;
+  color: white;
+  margin-bottom: 50px;
+
+  span {
+    color: #95c23f;
+  }
+
+  @media (max-width: 575px) {
+    text-align: center;
+    font-size: 38px;
+  }
+}
+
+.choice__list {
+  @include reset-list;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+
+  @media (max-width: 1450px) {
+    justify-content: space-around;
+  }
+}
+
+.choice__item {
+  background: #ffffff;
+  border-radius: 30px;
+  filter: drop-shadow(0px 0px 15px rgba(0, 0, 0, 0.15));
+  padding-top: 24px;
+  padding-bottom: 55px;
+  padding-left: 30px;
+  padding-right: 30px;
+  min-height: 376px;
+  @include max-width(448px);
+
+  background-image: url('/src/img/icons/gains/bg-1.png');
+  background-repeat: no-repeat;
+  background-position: right bottom;
+
+  &:nth-child(2) {
+    background-image: url('/src/img/icons/gains/bg-2.png');
+  }
+
+  &:nth-child(3) {
+    background-image: url('/src/img/icons/gains/bg-3.png');
+  }
+
+  @media (max-width: 1450px) {
+    margin-left: 5px;
+    margin-right: 5px;
+    margin-bottom: 25px;
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+
+  @media (max-width: 575px) {
+    padding-left: 13px;
+    padding-right: 13px;
+  }
+}
+
+.choice__item-logo {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 18px;
+}
+
+.choice__item-title {
+  margin-bottom: 15px;
+  text-align: center;
+  @include subtitle;
+}
+
+.choice__item-text {
+  @include main;
+  text-align: center;
+  @media (max-width: 575px) {
+    font-size: 20px;
+  }
+}

@@ -38,4 +38,8 @@
       margin-bottom: 20px;
     }
   }
+
+  &_modal-form {
+    @include max-width(448px);
+  }
 }
