@@ -1,0 +1,40 @@
+body {
+  background-color: white;
+  color: black;
+  font-family: 'Jost', sans-serif;
+  font-weight: 300;
+}
+
+.container {
+  position: relative;
+  z-index: 1;
+  max-width: 1411px;
+  margin: 0 auto;
+
+  &_line-form {
+    max-width: 1616px;
+
+    @media (max-width: 1650px) {
+      padding: 0 30px;
+    }
+  }
+
+  @media (max-width: 1450px) {
+    padding: 0 30px;
+  }
+
+  @media (max-width: 575px) {
+    padding: 0 15px;
+  }
+}
+
+.visually-hidden {
+  position: absolute;
+  overflow: hidden;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  border: 0;
+  margin: -1px;
+  clip: rect(0 0 0 0);
+}

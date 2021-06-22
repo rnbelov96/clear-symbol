@@ -1,0 +1,119 @@
+.line-form {
+  position: relative;
+  top: -360px;
+  margin-bottom: -360px;
+
+  @media (max-width: 1200px) {
+    top: 0px;
+    margin-bottom: 0px;
+  }
+}
+
+.line-form__form {
+  width: 100%;
+  margin-right: auto;
+  margin-left: auto;
+  position: relative;
+  z-index: 1;
+  left: 50%;
+  transform: translateX(-50%);
+  border: 2px solid #ded255;
+  background-color: white;
+  box-shadow: 0px 6px 20px rgba(222, 210, 85, 0.1);
+  border-radius: 30px;
+  padding-top: 50px;
+  padding-left: 105px;
+  padding-right: 105px;
+  padding-bottom: 31px;
+
+  @media (max-width: 1500px) {
+    padding-right: 30px;
+    padding-left: 30px;
+  }
+
+  @media (max-width: 575px) {
+    padding-top: 30px;
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+}
+
+.line-form__title {
+  font-weight: 500;
+  font-size: 32px;
+  line-height: 40px;
+  text-align: center;
+  color: #4e4d4d;
+  margin-bottom: 40px;
+
+  @media (max-width: 575px) {
+    font-size: 23px;
+    line-height: 33px;
+    margin-bottom: 20px;
+  }
+}
+
+.line-form__input-list {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  margin-bottom: 17px;
+
+  @media (max-width: 1200px) {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+.line-form__input-box {
+  width: 23%;
+
+  @media (max-width: 1200px) {
+    @include max-width(500px);
+    margin-bottom: 20px;
+  }
+}
+
+.line-form__input-label {
+  @include main;
+  color: #4e4d4d;
+  margin-bottom: 5px;
+  position: relative;
+  left: 5px;
+}
+
+.line-form__input {
+  opacity: 0.5;
+  border: 1px solid #4e4d4d;
+  padding-left: 32px;
+  padding-right: 15px;
+  border: 1px solid #4e4d4d;
+  border-radius: 60px;
+  background: #ffffff;
+  height: 80px;
+  width: 100%;
+  font-size: 22px;
+
+  &:focus,
+  &:hover {
+    opacity: 1;
+  }
+}
+
+.line-form__policy-text {
+  color: #c6c6c6;
+  font-weight: 300;
+  font-size: 14px;
+  line-height: 20px;
+  text-align: center;
+  @include max-width(620px);
+  margin-right: auto;
+  margin-left: auto;
+  margin-bottom: 0;
+
+  button {
+    @include reset-btn;
+    color: #c6c6c6;
+    text-decoration: underline;
+  }
+}
