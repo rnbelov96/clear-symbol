@@ -1,0 +1,120 @@
+.support {
+  padding-top: 43px;
+  padding-bottom: 80px;
+
+  @media (max-width: 575px) {
+    padding-top: 0;
+    padding-bottom: 30px;
+  }
+}
+
+.support__title {
+  @include title;
+  color: #105e3b;
+  margin-bottom: 53px;
+
+  span {
+    color: #95c23f;
+  }
+
+  @media (max-width: 991px) {
+    br {
+      display: none;
+    }
+  }
+
+  @media (max-width: 767px) {
+    text-align: center;
+    font-size: 39px;
+    line-height: 49px;
+  }
+
+  @media (max-width: 575px) {
+    font-size: 28px;
+    line-height: 43px;
+    margin-bottom: 35px;
+  }
+}
+
+.support__list {
+  @include reset-list;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+
+  @media (max-width: 1450px) {
+    justify-content: space-around;
+  }
+}
+
+.support__item {
+  background: #ffffff;
+  border-radius: 30px;
+  filter: drop-shadow(0px 0px 7px rgba(0, 0, 0, 0.15));
+  padding-top: 24px;
+  padding-bottom: 55px;
+  padding-left: 30px;
+  padding-right: 30px;
+  min-height: 376px;
+  margin-bottom: 32px;
+  @include max-width(448px);
+
+  background-image: url('/src/img/icons/support/bg-1.png');
+  background-repeat: no-repeat;
+  background-position: right bottom;
+
+  &:nth-child(2) {
+    background-image: url('/src/img/icons/support/bg-2.png');
+  }
+
+  &:nth-child(3) {
+    background-image: url('/src/img/icons/support/bg-3.png');
+  }
+
+  &:nth-child(4) {
+    background-image: url('/src/img/icons/support/bg-4.png');
+  }
+
+  &:nth-child(5) {
+    background-image: url('/src/img/icons/support/bg-5.png');
+  }
+
+  &:nth-child(6) {
+    background-image: url('/src/img/icons/support/bg-6.png');
+  }
+
+  @media (max-width: 1450px) {
+    margin-left: 5px;
+    margin-right: 5px;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+
+  @media (max-width: 575px) {
+    padding-left: 13px;
+    padding-right: 13px;
+  }
+}
+
+.support__item-img {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 18px;
+}
+
+.support__item-title {
+  margin-bottom: 15px;
+  text-align: center;
+  @include subtitle;
+}
+
+.support__item-text {
+  @include main;
+  text-align: center;
+  @media (max-width: 575px) {
+    font-size: 20px;
+  }
+}

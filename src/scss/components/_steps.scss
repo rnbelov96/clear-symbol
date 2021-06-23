@@ -1,0 +1,111 @@
+.steps {
+  min-height: 871px;
+  @include bg;
+  background-image: url('/src/img/bgs/steps-bg.png');
+  padding-top: 66px;
+  padding-bottom: 106px;
+
+  @media (max-width: 575px) {
+    padding-bottom: 60px;
+  }
+}
+
+.steps__title {
+  @include title;
+  color: white;
+  margin-bottom: 50px;
+  span {
+    color: #95c23f;
+  }
+
+  @media (max-width: 767px) {
+    font-size: 38px;
+    line-height: 52px;
+  }
+
+  @media (max-width: 575px) {
+    font-size: 29px;
+    line-height: 44px;
+  }
+}
+
+.steps__list {
+  @include reset-list;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  margin-bottom: 30px;
+
+  @media (max-width: 1450px) {
+    justify-content: space-around;
+  }
+}
+
+.steps__item {
+  border-radius: 30px;
+  border: 4px solid #95c23f;
+  width: 448px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 43px;
+  padding-bottom: 30px;
+  padding-left: 25px;
+  padding-right: 25px;
+  min-height: 408px;
+  color: white;
+
+  &:first-child .steps__item-title::before {
+    left: 22px;
+  }
+
+  @media (max-width: 1450px) {
+    margin-left: 5px;
+    margin-right: 5px;
+    margin-bottom: 30px;
+  }
+
+  @media (max-width: 575px) {
+    padding-top: 25px;
+  }
+}
+
+.steps__item-title {
+  @include title;
+  text-align: center;
+  position: relative;
+  &::before {
+    content: url('/src/img/leafs.png');
+    position: absolute;
+    left: 59px;
+    top: -59px;
+
+    @media (max-width: 575px) {
+      content: none;
+    }
+  }
+  margin-bottom: 37px;
+}
+
+.steps__text {
+  margin-bottom: 16px;
+  @include main-bold;
+  text-align: center;
+
+  &:last-child {
+    margin-bottom: 30px;
+  }
+
+  @media (max-width: 575px) {
+    line-height: 28px;
+  }
+}
+
+.steps__bottom {
+  text-align: center;
+  color: white;
+  font-size: 32px;
+  line-height: 40px;
+  font-weight: 500;
+}

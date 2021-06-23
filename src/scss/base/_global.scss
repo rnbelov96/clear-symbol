@@ -23,6 +23,14 @@ main {
     }
   }
 
+  &_owner {
+    max-width: 1472px;
+
+    @media (max-width: 1500px) {
+      padding: 0 30px;
+    }
+  }
+
   @media (max-width: 1450px) {
     padding: 0 30px;
   }

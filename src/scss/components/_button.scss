@@ -42,4 +42,11 @@
   &_modal-form {
     @include max-width(448px);
   }
+
+  &_steps {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    @include max-width(448px);
+  }
 }
