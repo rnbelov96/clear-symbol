@@ -31,6 +31,29 @@
       }
     }
   }
+
+  &_catalog {
+    margin-right: auto;
+
+    @media (max-width: 991px) {
+      margin-left: auto;
+    }
+
+    &::after {
+      content: url('/src/img/tablet.png');
+      position: absolute;
+      right: -746px;
+      top: 0px;
+
+      @media (max-width: 1450px) {
+        right: -700px;
+      }
+
+      @media (max-width: 991px) {
+        content: none;
+      }
+    }
+  }
 }
 
 .modal-form__title {

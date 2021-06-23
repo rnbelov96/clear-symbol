@@ -1,0 +1,246 @@
+.calc {
+  padding-top: 67px;
+  padding-bottom: 64px;
+
+  @media (max-width: 575px) {
+    padding-bottom: 40px;
+    padding-top: 40px;
+  }
+}
+
+.calc__title {
+  @include title;
+  color: #105e3b;
+  @include max-width(860px);
+  margin-bottom: 23px;
+
+  span {
+    color: #95c23f;
+  }
+
+  @media (max-width: 767px) {
+    font-size: 39px;
+  }
+
+  @media (max-width: 575px) {
+    font-size: 26px;
+    line-height: 46px;
+  }
+}
+
+.calc__text {
+  margin-bottom: 45px;
+  @include subtitle;
+  color: #4e4d4d;
+
+  @media (max-width: 575px) {
+    font-size: 22px;
+  }
+}
+
+.calc__list {
+  @include reset-list;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+
+  @media (max-width: 1200px) {
+    justify-content: center;
+  }
+}
+
+.calc__item {
+  width: 48.8%;
+  min-height: 184px;
+  background: #ffffff;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+  border-radius: 30px;
+  padding-left: 44px;
+  padding-right: 44px;
+  padding-top: 25px;
+  margin-bottom: 30px;
+  padding-bottom: 25px;
+
+  @media (max-width: 1200px) {
+    @include max-width(688px);
+  }
+
+  @media (max-width: 575px) {
+    padding-left: 12px;
+    padding-right: 12px;
+  }
+}
+
+.calc__item-title {
+  margin-bottom: 30px;
+  @include subtitle;
+  color: #4e4d4d;
+
+  @media (max-width: 575px) {
+    font-size: 23px;
+  }
+}
+
+.calc__radio-list {
+  display: flex;
+  justify-content: space-between;
+}
+
+.calc__radio-box {
+  width: 76px;
+  height: 48px;
+
+  @media (max-width: 575px) {
+    margin-right: 5px;
+  }
+}
+
+.calc__radio-input:checked + .calc__radio-label {
+  background: linear-gradient(180deg, #95c23f 0%, #00893a 100%);
+  border: none;
+  color: white;
+}
+
+.calc__radio-label {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: 300;
+  font-size: 24px;
+  line-height: 32px;
+  color: #4e4d4d;
+  border-radius: 8px;
+  border: 2px #00893a solid;
+  margin-bottom: 0;
+  width: 100%;
+  height: 100%;
+  cursor: pointer;
+}
+
+.calc__range-input {
+  width: 100%;
+  height: 6px;
+  margin-bottom: 15px;
+  -moz-appearance: none;
+  -webkit-appearance: none;
+  appearance: none;
+  background: linear-gradient(
+    to right,
+    #4aa016 0%,
+    #4aa016 50%,
+    #e5e5e5 50%,
+    #e5e5e5 100%
+  );
+  background-color: #e5e5e5;
+  border-radius: 4px;
+
+  &::-webkit-slider-thumb {
+    width: 33px;
+    height: 33px;
+    -webkit-appearance: none;
+    appearance: none;
+    background-image: url('/src/img/icons/thumb.png');
+    cursor: pointer;
+
+    &:hover {
+      transform: scale(1.1);
+    }
+  }
+
+  &::-moz-range-thumb {
+    width: 33px;
+    height: 33px;
+    -moz-appearance: none;
+    appearance: none;
+    background-image: url('/src/img/icons/thumb.png');
+    cursor: pointer;
+
+    &:hover {
+      transform: scale(1.1);
+    }
+  }
+
+  &::-ms-thumb {
+    width: 33px;
+    height: 33px;
+    appearance: none;
+    background-image: url('/src/img/icons/thumb.png');
+    cursor: pointer;
+
+    &:hover {
+      transform: scale(1.1);
+    }
+  }
+}
+
+.calc__endpoints {
+  display: flex;
+  justify-content: space-between;
+}
+
+.calc__endpoint {
+  @include main;
+  color: #4e4d4d;
+
+  @media (max-width: 575px) {
+    font-size: 12px;
+  }
+
+  &_active {
+    color: #3E7333;
+  }
+}
+
+.calc__waste {
+  font-weight: 500;
+  font-size: 44px;
+  line-height: 40px;
+  color: #3e7333;
+}
+
+.calc__result-box {
+  background: #4aa016;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  padding-left: 20px;
+  padding-right: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.calc__result {
+  font-weight: 500;
+  font-size: 36px;
+  line-height: 56px;
+  color: white;
+  margin-bottom: 0;
+
+  @media (max-width: 991px) {
+    text-align: center;
+  }
+
+  br {
+    display: none;
+
+    @media (max-width: 991px) {
+      display: block;
+    }
+  }
+
+  b {
+    font-weight: 900;
+    font-size: 48px;
+
+    @media (max-width: 575px) {
+      font-size: 42px;
+    }
+  }
+
+  @media (max-width: 575px) {
+    font-size: 23px;
+    line-height: 47px;
+  }
+}

@@ -402,6 +402,237 @@
           </ul>
         </div>
       </section>
+
+      <section class="catalog">
+        <div class="container">
+          <form class="modal-form modal-form_catalog">
+            <h3 class="modal-form__title">
+              Получите каталог продукции и оптово-розничный прайс-лист
+            </h3>
+            <div class="modal-form__input-list">
+              <div class="modal-form__input-box">
+                <label
+                  for="modal-form-catalog-name"
+                  class="modal-form__input-label"
+                  >Введите ваше имя</label
+                >
+                <input
+                  id="modal-form-catalog-name"
+                  type="text"
+                  name="name"
+                  placeholder="Иван"
+                  data-type="name"
+                  class="modal-form__input"
+                />
+              </div>
+              <div class="modal-form__input-box">
+                <label
+                  for="modal-form-catalog-phone"
+                  class="modal-form__input-label"
+                  >Введите ваш телефон</label
+                >
+                <input
+                  id="modal-form-catalog-phone"
+                  type="text"
+                  name="phone"
+                  placeholder="+7 (    ) ___ __ __"
+                  data-type="phone"
+                  class="modal-form__input"
+                />
+              </div>
+              <div class="modal-form__input-box">
+                <label
+                  for="modal-form-catalog-email"
+                  class="modal-form__input-label"
+                  >Введите ваш e-mail</label
+                >
+                <input
+                  id="modal-form-catalog-email"
+                  type="text"
+                  name="email"
+                  placeholder="example@mail.ru"
+                  data-type="email"
+                  class="modal-form__input"
+                />
+              </div>
+              <button type="submit" class="button button_modal-form">
+                Получить <br />
+                каталог с ценами
+              </button>
+            </div>
+            <p class="modal-form__policy-text">
+              Нажимая на кнопку «Получить каталог с ценами», я даю согласие на
+              обработку персональных данных и соглашаюсь с
+              <button type="button" class="js-policy">
+                политикой конфиденциальности
+              </button>
+            </p>
+          </form>
+        </div>
+      </section>
+
+      <section class="calc">
+        <div class="container">
+          <h2 class="calc__title">
+            Откройте несколько магазинов —
+            <span>приумножьте прибыль бизнеса</span>
+          </h2>
+          <p class="calc__text">
+            Сколько вы будете зарабатывать с франшизой «Символ Чистоты»?
+          </p>
+          <ul class="calc__list">
+            <li class="calc__item">
+              <p class="calc__item-title">Количество магазинов</p>
+              <div class="calc__radio-list">
+                <div class="calc__radio-box">
+                  <input
+                    id="shop-1"
+                    type="radio"
+                    name="shops"
+                    value="1"
+                    checked
+                    class="calc__radio-input js-radio visually-hidden"
+                  /><label for="shop-1" class="calc__radio-label">1</label>
+                </div>
+                <div class="calc__radio-box">
+                  <input
+                    id="shop-2"
+                    type="radio"
+                    name="shops"
+                    value="2"
+                    class="calc__radio-input js-radio visually-hidden"
+                  /><label for="shop-2" class="calc__radio-label">2</label>
+                </div>
+                <div class="calc__radio-box">
+                  <input
+                    id="shop-3"
+                    type="radio"
+                    name="shops"
+                    value="3"
+                    class="calc__radio-input js-radio visually-hidden"
+                  /><label for="shop-3" class="calc__radio-label">3</label>
+                </div>
+                <div class="calc__radio-box">
+                  <input
+                    id="shop-4"
+                    type="radio"
+                    name="shops"
+                    value="4"
+                    class="calc__radio-input js-radio visually-hidden"
+                  /><label for="shop-4" class="calc__radio-label">4</label>
+                </div>
+                <div class="calc__radio-box">
+                  <input
+                    id="shop-5"
+                    type="radio"
+                    name="shops"
+                    value="5"
+                    class="calc__radio-input js-radio visually-hidden"
+                  /><label for="shop-5" class="calc__radio-label">5</label>
+                </div>
+              </div>
+            </li>
+            <li class="calc__item">
+              <p class="calc__item-title">Стоимость аренды, руб.</p>
+              <input
+                type="range"
+                min="20000"
+                max="80000"
+                step="20000"
+                class="calc__range-input js-range"
+              />
+              <div class="calc__endpoints">
+                <div class="calc__endpoint">20 000</div>
+                <div class="calc__endpoint">40 000</div>
+                <div class="calc__endpoint">60 000</div>
+                <div class="calc__endpoint">80 000</div>
+              </div>
+            </li>
+            <li class="calc__item">
+              <p class="calc__item-title">
+                Выручка магазина (товарооборот), руб.
+              </p>
+              <input
+                type="range"
+                min="200000"
+                max="600000"
+                step="100000"
+                class="calc__range-input js-range"
+              />
+              <div class="calc__endpoints">
+                <div class="calc__endpoint">250 000</div>
+                <div class="calc__endpoint">300 000</div>
+                <div class="calc__endpoint">400 000</div>
+                <div class="calc__endpoint">500 000</div>
+                <div class="calc__endpoint">600 000</div>
+              </div>
+            </li>
+            <li class="calc__item">
+              <p class="calc__item-title">Прочие расходы, руб.</p>
+              <input
+                type="range"
+                min="20000"
+                max="80000"
+                step="20000"
+                class="calc__range-input js-range"
+              />
+              <div class="calc__endpoints">
+                <div class="calc__endpoint">20 000</div>
+                <div class="calc__endpoint">40 000</div>
+                <div class="calc__endpoint">60 000</div>
+                <div class="calc__endpoint">80 000</div>
+              </div>
+            </li>
+            <li class="calc__item">
+              <p class="calc__item-title">Выручка интернет-магазина, руб.</p>
+              <input
+                type="range"
+                min="20000"
+                max="100000"
+                step="20000"
+                class="calc__range-input js-range"
+              />
+              <div class="calc__endpoints">
+                <div class="calc__endpoint">20 000</div>
+                <div class="calc__endpoint">40 000</div>
+                <div class="calc__endpoint">60 000</div>
+                <div class="calc__endpoint">80 000</div>
+                <div class="calc__endpoint">100 000</div>
+              </div>
+            </li>
+            <li class="calc__item">
+              <p class="calc__item-title">Фонд оплаты труда, руб.</p>
+              <p class="calc__waste">35 000</p>
+            </li>
+            <li class="calc__item">
+              <p class="calc__item-title">Выручка от оптовых продаж, руб.</p>
+              <input
+                type="range"
+                min="50000"
+                max="200000"
+                step="50000"
+                class="calc__range-input js-range"
+              />
+              <div class="calc__endpoints">
+                <div class="calc__endpoint">50 000</div>
+                <div class="calc__endpoint">100 000</div>
+                <div class="calc__endpoint">150 000</div>
+                <div class="calc__endpoint">200 000</div>
+              </div>
+            </li>
+            <li class="calc__item">
+              <p class="calc__item-title">Расходы суммарно, руб.</p>
+              <p class="calc__waste">115 000</p>
+            </li>
+          </ul>
+          <div class="calc__result-box">
+            <p class="calc__result">
+              Прибыль одного магазина: <br>
+              <b><span class="js-calc-result">250 000</span> рублей</b>
+            </p>
+          </div>
+        </div>
+      </section>
     </main>
 
     <div class="modal">
