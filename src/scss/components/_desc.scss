@@ -1,9 +1,10 @@
 .desc {
-  min-height: 1018px;
-  @include bg;
-  background-image: url('/src/img/bgs/desc-bg.png');
   position: relative;
   z-index: 1;
+  min-height: 1018px;
+  background-image: url('/src/img/bgs/desc-bg.png');
+
+  @include bg;
 
   @media (max-width: 1200px) {
     min-height: auto;
@@ -12,24 +13,26 @@
   }
 
   @media (max-width: 800px) {
-    padding-bottom: 0px;
+    padding-bottom: 0;
   }
 }
 
 .desc__title {
   @include title-main;
-  text-align: center;
-  color: #105e3b;
-  margin-bottom: 15px;
-  @include max-width(1086px);
-  margin-left: auto;
-  margin-right: auto;
+
   margin-top: 53px;
+  margin-right: auto;
+  margin-bottom: 15px;
+  margin-left: auto;
+  color: #105e3b;
+  text-align: center;
+
+  @include max-width(1086px);
 
   @media (max-width: 767px) {
+    margin-top: 25px;
     font-size: 40px;
     line-height: 50px;
-    margin-top: 25px;
   }
 
   @media (max-width: 575px) {
@@ -40,7 +43,9 @@
 
 .desc__text {
   margin-bottom: 37px;
+
   @include subtitle;
+
   color: #4e4d4d;
   text-align: center;
 
@@ -62,11 +67,13 @@
 
 .desc__list {
   @include reset-list;
+
   display: flex;
   justify-content: space-between;
-  @include max-width(1000px);
-  margin-left: auto;
   margin-right: auto;
+  margin-left: auto;
+
+  @include max-width(1000px);
 
   @media (max-width: 800px) {
     flex-wrap: wrap;
@@ -76,46 +83,46 @@
 
 .desc__item {
   @media (max-width: 800px) {
+    margin-right: 5px;
     margin-bottom: 30px;
     margin-left: 5px;
-    margin-right: 5px;
   }
 }
 
 .desc__list-title {
   margin-bottom: 13px;
-  font-weight: 500;
-  font-size: 26px;
-  text-align: center;
-  line-height: 32px;
   color: #4e4d4d;
+  font-size: 26px;
+  font-weight: 500;
+  line-height: 32px;
+  text-align: center;
 }
 
 .desc__list-top {
-  color: #4aa016;
   margin-bottom: 0;
-  text-align: center;
+  color: #4aa016;
   font-size: 28px;
   font-weight: 500;
   line-height: 40px;
+  text-align: center;
 
   span {
-    font-weight: 900;
     font-size: 48px;
+    font-weight: 900;
     line-height: 56px;
   }
 }
 
 .desc__list-bottom {
-  color: #105e3b;
   margin-bottom: 0;
+  color: #105e3b;
   font-size: 28px;
   font-weight: 500;
   line-height: 40px;
 
   span {
-    font-weight: 900;
     font-size: 48px;
+    font-weight: 900;
     line-height: 56px;
   }
 

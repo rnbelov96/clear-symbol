@@ -149,30 +149,6 @@ document.addEventListener('DOMContentLoaded', () => {
 
       if (document.formData.name === undefined) document.formData.name = window.location.hostname;
 
-      const bitrixData = {
-        email: document.formData.email,
-        phone: document.formData.phone,
-        city: document.formData.city,
-        name: document.formData.name,
-      };
-      let bitrixFormBody = [];
-      Object.keys(bitrixData).forEach(key => {
-        const encodedKey = encodeURIComponent(key);
-        const encodedValue = encodeURIComponent(bitrixData[key]);
-        bitrixFormBody.push(`${encodedKey}=${encodedValue}`);
-      });
-      bitrixFormBody = bitrixFormBody.join('&');
-      await fetch(
-        'bitrix/index.php',
-        {
-          method: 'POST',
-          headers: {
-            'Content-Type': 'application/x-www-form-urlencoded;charset=UTF-8',
-          },
-          body: bitrixFormBody,
-        },
-      );
-
       const data = JSON.stringify(document.formData);
 
       const response = await fetch(

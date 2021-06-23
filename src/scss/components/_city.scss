@@ -1,9 +1,10 @@
 .city {
   min-height: 888px;
-  @include bg;
-  background-image: url('/src/img/bgs/city-bg.png');
   padding-top: 50px;
   padding-bottom: 55px;
+  background-image: url('/src/img/bgs/city-bg.png');
+
+  @include bg;
 
   @media (max-width: 575px) {
     padding-top: 30px;
@@ -24,9 +25,10 @@
 .city__title {
   @include max-width(690px);
   @include title-main;
+
+  margin-top: 20px;
   color: white;
   line-height: 70px;
-  margin-top: 20px;
 
   @media (max-width: 1300px) {
     font-size: 45px;
@@ -41,8 +43,9 @@
     br {
       display: none;
     }
-    text-align: center;
+
     margin-bottom: 20px;
+    text-align: center;
   }
 
   @media (max-width: 767px) {
@@ -56,9 +59,9 @@
   }
 
   span {
-    color: #95c23f;
-    background-color: white;
-    padding-left: 5px;
     padding-right: 5px;
+    padding-left: 5px;
+    background-color: white;
+    color: #95c23f;
   }
 }

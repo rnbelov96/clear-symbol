@@ -1,8 +1,8 @@
 .header {
-  padding-top: 16px;
   display: flex;
-  justify-content: space-between;
   align-items: center;
+  justify-content: space-between;
+  padding-top: 16px;
 
   @media (max-width: 575px) {
     flex-direction: column;
@@ -15,9 +15,9 @@
 }
 
 .header__text {
+  margin-bottom: 0;
   font-size: 20px;
   line-height: normal;
-  margin-bottom: 0;
 
   @media (max-width: 991px) {
     display: none;
@@ -26,25 +26,28 @@
 
 .header__contact-box {
   display: flex;
-  justify-content: center;
-  align-items: center;
   flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
 
 .header__phone {
   @include main-bold;
+
   color: #4e4d4d;
 
   &:hover,
+  &:focus,
   &:active {
-    color: #4E4D4D;
+    color: #4e4d4d;
     text-decoration: underline;
   }
 }
 
 .header__callback {
   @include reset-btn;
-  color: #4E4D4D;
+
+  color: #4e4d4d;
   font-size: 18px;
   font-weight: 300;
 }

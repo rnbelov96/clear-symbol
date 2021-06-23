@@ -1,18 +1,28 @@
 .calc {
+  position: relative;
   padding-top: 67px;
   padding-bottom: 64px;
 
   @media (max-width: 575px) {
-    padding-bottom: 40px;
     padding-top: 40px;
+    padding-bottom: 40px;
   }
+}
+
+.calc__img {
+  position: absolute;
+  z-index: -1;
+  top: -70px;
+  left: -240px;
 }
 
 .calc__title {
   @include title;
-  color: #105e3b;
-  @include max-width(860px);
+
   margin-bottom: 23px;
+  color: #105e3b;
+
+  @include max-width(860px);
 
   span {
     color: #95c23f;
@@ -30,7 +40,9 @@
 
 .calc__text {
   margin-bottom: 45px;
+
   @include subtitle;
+
   color: #4e4d4d;
 
   @media (max-width: 575px) {
@@ -40,6 +52,7 @@
 
 .calc__list {
   @include reset-list;
+
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
@@ -52,28 +65,30 @@
 .calc__item {
   width: 48.8%;
   min-height: 184px;
-  background: #ffffff;
-  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
-  border-radius: 30px;
-  padding-left: 44px;
-  padding-right: 44px;
   padding-top: 25px;
-  margin-bottom: 30px;
+  padding-right: 44px;
   padding-bottom: 25px;
+  padding-left: 44px;
+  margin-bottom: 30px;
+  background: #fff;
+  border-radius: 30px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 
   @media (max-width: 1200px) {
     @include max-width(688px);
   }
 
   @media (max-width: 575px) {
-    padding-left: 12px;
     padding-right: 12px;
+    padding-left: 12px;
   }
 }
 
 .calc__item-title {
   margin-bottom: 30px;
+
   @include subtitle;
+
   color: #4e4d4d;
 
   @media (max-width: 575px) {
@@ -96,25 +111,25 @@
 }
 
 .calc__radio-input:checked + .calc__radio-label {
-  background: linear-gradient(180deg, #95c23f 0%, #00893a 100%);
   border: none;
+  background: linear-gradient(180deg, #95c23f 0%, #00893a 100%);
   color: white;
 }
 
 .calc__radio-label {
   display: flex;
-  justify-content: center;
-  align-items: center;
-  font-weight: 300;
-  font-size: 24px;
-  line-height: 32px;
-  color: #4e4d4d;
-  border-radius: 8px;
-  border: 2px #00893a solid;
-  margin-bottom: 0;
   width: 100%;
   height: 100%;
+  align-items: center;
+  justify-content: center;
+  border: 2px #00893a solid;
+  margin-bottom: 0;
+  border-radius: 8px;
+  color: #4e4d4d;
   cursor: pointer;
+  font-size: 24px;
+  font-weight: 300;
+  line-height: 32px;
 }
 
 .calc__range-input {
@@ -124,13 +139,14 @@
   -moz-appearance: none;
   -webkit-appearance: none;
   appearance: none;
-  background: linear-gradient(
-    to right,
-    #4aa016 0%,
-    #4aa016 50%,
-    #e5e5e5 50%,
-    #e5e5e5 100%
-  );
+  background:
+    linear-gradient(
+      to right,
+      #4aa016 0%,
+      #4aa016 50%,
+      #e5e5e5 50%,
+      #e5e5e5 100%
+    );
   background-color: #e5e5e5;
   border-radius: 4px;
 
@@ -142,7 +158,8 @@
     background-image: url('/src/img/icons/thumb.png');
     cursor: pointer;
 
-    &:hover {
+    &:hover,
+    &:focus {
       transform: scale(1.1);
     }
   }
@@ -155,7 +172,8 @@
     background-image: url('/src/img/icons/thumb.png');
     cursor: pointer;
 
-    &:hover {
+    &:hover,
+    &:focus {
       transform: scale(1.1);
     }
   }
@@ -167,7 +185,8 @@
     background-image: url('/src/img/icons/thumb.png');
     cursor: pointer;
 
-    &:hover {
+    &:hover,
+    &:focus {
       transform: scale(1.1);
     }
   }
@@ -180,6 +199,7 @@
 
 .calc__endpoint {
   @include main;
+
   color: #4e4d4d;
 
   @media (max-width: 575px) {
@@ -187,36 +207,36 @@
   }
 
   &_active {
-    color: #3E7333;
+    color: #3e7333;
   }
 }
 
 .calc__waste {
-  font-weight: 500;
-  font-size: 44px;
-  line-height: 40px;
   color: #3e7333;
+  font-size: 44px;
+  font-weight: 500;
+  line-height: 40px;
 }
 
 .calc__result-box {
-  background: #4aa016;
-  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
-  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   padding-top: 20px;
+  padding-right: 20px;
   padding-bottom: 20px;
   padding-left: 20px;
-  padding-right: 20px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  background: #4aa016;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
 .calc__result {
-  font-weight: 500;
-  font-size: 36px;
-  line-height: 56px;
-  color: white;
   margin-bottom: 0;
+  color: white;
+  font-size: 36px;
+  font-weight: 500;
+  line-height: 56px;
 
   @media (max-width: 991px) {
     text-align: center;
@@ -231,8 +251,8 @@
   }
 
   b {
-    font-weight: 900;
     font-size: 48px;
+    font-weight: 900;
 
     @media (max-width: 575px) {
       font-size: 42px;

@@ -1,24 +1,25 @@
 .feedback {
-  min-height: 1322px;
-  @include bg;
-  background-image: url('/src/img/bgs/feedback-bg.png');
-  padding-top: 400px;
-  padding-bottom: 136px;
   position: relative;
   top: -230px;
+  min-height: 1322px;
+  padding-top: 400px;
+  padding-bottom: 136px;
   margin-bottom: -230px;
+  background-image: url('/src/img/bgs/feedback-bg.png');
+
+  @include bg;
 
   @media (max-width: 1200px) {
     top: -320px;
-    margin-bottom: -320px;
     min-height: 1272px;
     padding-bottom: 90px;
+    margin-bottom: -320px;
   }
 
   @media (max-width: 575px) {
+    top: -350px;
     min-height: auto;
     padding-bottom: 40px;
-    top: -350px;
     margin-bottom: -350px;
   }
 }

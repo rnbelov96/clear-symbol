@@ -1,30 +1,33 @@
 .modal-form {
-  box-shadow: 0px 6px 20px rgba(222, 210, 85, 0.1);
-  border-radius: 30px;
-  background: #ffffff;
-  border: 2px solid #ded255;
+  position: relative;
   padding-top: 40px;
+  padding-right: 30px;
   padding-bottom: 45px;
   padding-left: 30px;
-  padding-right: 30px;
+  border: 2px solid #ded255;
+  background: #fff;
+  border-radius: 30px;
+  box-shadow: 0 6px 20px rgba(222, 210, 85, 0.1);
+
   @include max-width(687px);
-  position: relative;
 
   @media (max-width: 575px) {
-    padding-left: 15px;
     padding-right: 15px;
+    padding-left: 15px;
   }
 
   &_feedback {
     margin-left: auto;
+
     @media (max-width: 991px) {
       margin-right: auto;
     }
+
     &::before {
-      content: url('/src/img/book.png');
       position: absolute;
-      left: -878px;
       top: 120px;
+      left: -878px;
+      content: url('/src/img/book.png');
 
       @media (max-width: 991px) {
         content: none;
@@ -40,10 +43,10 @@
     }
 
     &::after {
-      content: url('/src/img/tablet.png');
       position: absolute;
+      top: 0;
       right: -746px;
-      top: 0px;
+      content: url('/src/img/tablet.png');
 
       @media (max-width: 1450px) {
         right: -700px;
@@ -54,15 +57,19 @@
       }
     }
   }
+
+  &_modal {
+    width: 98%;
+  }
 }
 
 .modal-form__title {
   margin-bottom: 39px;
-  font-weight: 500;
+  color: #4e4d4d;
   font-size: 32px;
+  font-weight: 500;
   line-height: 40px;
   text-align: center;
-  color: #4e4d4d;
 
   @media (max-width: 575px) {
     font-size: 22px;
@@ -79,6 +86,7 @@
 
 .modal-form__input-box {
   @include max-width(448px);
+
   margin-bottom: 20px;
 
   &:nth-child(3) {
@@ -88,23 +96,23 @@
 
 .modal-form__input-label {
   @include main;
-  color: #4e4d4d;
-  margin-bottom: 5px;
+
   position: relative;
   left: 5px;
+  margin-bottom: 5px;
+  color: #4e4d4d;
 }
 
 .modal-form__input {
-  opacity: 0.5;
-  border: 1px solid #4e4d4d;
-  padding-left: 32px;
-  padding-right: 15px;
-  border: 1px solid #4e4d4d;
-  border-radius: 60px;
-  background: #ffffff;
-  height: 80px;
   width: 100%;
+  height: 80px;
+  padding-right: 15px;
+  padding-left: 32px;
+  border: 1px solid #4e4d4d;
+  background: #fff;
+  border-radius: 60px;
   font-size: 22px;
+  opacity: 0.5;
 
   &:focus,
   &:hover {
@@ -113,18 +121,20 @@
 }
 
 .modal-form__policy-text {
+  margin-right: auto;
+  margin-bottom: 0;
+  margin-left: auto;
   color: #c6c6c6;
-  font-weight: 300;
   font-size: 14px;
+  font-weight: 300;
   line-height: 20px;
   text-align: center;
+
   @include max-width(484px);
-  margin-right: auto;
-  margin-left: auto;
-  margin-bottom: 0;
 
   button {
     @include reset-btn;
+
     color: #c6c6c6;
     text-decoration: underline;
   }

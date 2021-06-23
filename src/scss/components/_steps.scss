@@ -1,9 +1,10 @@
 .steps {
   min-height: 871px;
-  @include bg;
-  background-image: url('/src/img/bgs/steps-bg.png');
   padding-top: 66px;
   padding-bottom: 106px;
+  background-image: url('/src/img/bgs/steps-bg.png');
+
+  @include bg;
 
   @media (max-width: 575px) {
     padding-bottom: 60px;
@@ -12,8 +13,10 @@
 
 .steps__title {
   @include title;
-  color: white;
+
   margin-bottom: 50px;
+  color: white;
+
   span {
     color: #95c23f;
   }
@@ -31,9 +34,10 @@
 
 .steps__list {
   @include reset-list;
+
   display: flex;
-  justify-content: space-between;
   flex-wrap: wrap;
+  justify-content: space-between;
   margin-bottom: 30px;
 
   @media (max-width: 1450px) {
@@ -42,18 +46,18 @@
 }
 
 .steps__item {
-  border-radius: 30px;
-  border: 4px solid #95c23f;
-  width: 448px;
   display: flex;
+  width: 448px;
+  min-height: 408px;
   flex-direction: column;
-  justify-content: space-between;
   align-items: center;
+  justify-content: space-between;
   padding-top: 43px;
+  padding-right: 25px;
   padding-bottom: 30px;
   padding-left: 25px;
-  padding-right: 25px;
-  min-height: 408px;
+  border: 4px solid #95c23f;
+  border-radius: 30px;
   color: white;
 
   &:first-child .steps__item-title::before {
@@ -61,9 +65,9 @@
   }
 
   @media (max-width: 1450px) {
-    margin-left: 5px;
     margin-right: 5px;
     margin-bottom: 30px;
+    margin-left: 5px;
   }
 
   @media (max-width: 575px) {
@@ -73,24 +77,28 @@
 
 .steps__item-title {
   @include title;
-  text-align: center;
+
   position: relative;
+  margin-bottom: 37px;
+  text-align: center;
+
   &::before {
-    content: url('/src/img/leafs.png');
     position: absolute;
-    left: 59px;
     top: -59px;
+    left: 59px;
+    content: url('/src/img/leafs.png');
 
     @media (max-width: 575px) {
       content: none;
     }
   }
-  margin-bottom: 37px;
 }
 
 .steps__text {
   margin-bottom: 16px;
+
   @include main-bold;
+
   text-align: center;
 
   &:last-child {
@@ -103,9 +111,9 @@
 }
 
 .steps__bottom {
-  text-align: center;
   color: white;
   font-size: 32px;
-  line-height: 40px;
   font-weight: 500;
+  line-height: 40px;
+  text-align: center;
 }

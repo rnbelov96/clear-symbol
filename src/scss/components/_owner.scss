@@ -10,6 +10,7 @@
 
 .owner__title {
   @include title;
+
   margin-bottom: 35px;
   color: #105e3b;
 
@@ -29,42 +30,44 @@
 }
 
 .owner__box {
-  background: #ffffff;
-  box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.15);
-  border-radius: 30px;
-  padding: 32px;
   display: flex;
-  justify-content: space-between;
   flex-wrap: wrap;
+  justify-content: space-between;
+  padding: 32px;
+  background: #fff;
+  border-radius: 30px;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.15);
 
   @media (max-width: 991px) {
     justify-content: center;
   }
 
   @media (max-width: 575px) {
-    padding-left: 15px;
     padding-right: 15px;
+    padding-left: 15px;
   }
 
   &::before {
-    content: url('/src/img/owner-grass-left.png');
     position: absolute;
-    left: -220px;
     top: 296px;
+    left: -220px;
+    content: url('/src/img/owner-grass-left.png');
   }
 
   &::after {
-    content: url('/src/img/owner-grass-right.png');
     position: absolute;
-    right: -222px;
     top: 450px;
+    right: -222px;
+    content: url('/src/img/owner-grass-right.png');
   }
 }
 
 .owner__left-side {
   width: 40%;
+
   @media (max-width: 991px) {
     @include max-width(586px);
+
     margin-bottom: 30px;
   }
 }
@@ -76,14 +79,17 @@
 
 .owner__name {
   margin-bottom: 0;
+
   @include subtitle;
+
   color: #4e4d4d;
 }
 
 .owner__caption {
-  color: #4e4d4d;
-  @include main-bold;
   margin-bottom: 0;
+  color: #4e4d4d;
+
+  @include main-bold;
 
   @media (max-width: 575px) {
     font-size: 17px;
@@ -100,7 +106,9 @@
 
 .owner__text-title {
   margin-bottom: 14px;
+
   @include subtitle;
+
   color: #4e4d4d;
 
   @media (max-width: 575px) {
@@ -110,10 +118,10 @@
 }
 
 .owner__text {
-  font-weight: 300;
-  font-size: 22px;
-  line-height: 32px;
   color: #4e4d4d;
+  font-size: 22px;
+  font-weight: 300;
+  line-height: 32px;
 
   &:last-child {
     margin-bottom: 0;

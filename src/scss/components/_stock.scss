@@ -4,11 +4,35 @@
 
 .stock__title {
   @include title;
-  color: #105e3b;
+
+  position: relative;
   margin-bottom: 108px;
+  color: #105e3b;
 
   span {
     color: #95c23f;
+  }
+
+  &::before {
+    position: absolute;
+    top: -113px;
+    left: -246px;
+    content: url('/src/img/bubles-left.png');
+
+    @media (max-width: 1450px) {
+      content: none;
+    }
+  }
+
+  &::after {
+    position: absolute;
+    top: -50px;
+    right: -240px;
+    content: url('/src/img/bubles-right.png');
+
+    @media (max-width: 1450px) {
+      content: none;
+    }
   }
 
   @media (max-width: 1200px) {
@@ -30,6 +54,7 @@
 
 .stock__list {
   @include reset-list;
+
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
@@ -40,144 +65,154 @@
 }
 
 .stock__item {
-  box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.2);
-  background: #ffffff;
-  border-top-left-radius: 170px;
-  border-top-right-radius: 170px;
-  border-bottom-left-radius: 30px;
-  border-bottom-right-radius: 30px;
-  @include max-width(328px);
+  position: relative;
   min-height: 457px;
-  padding-left: 20px;
+  padding-top: 238px;
   padding-right: 20px;
   padding-bottom: 32px;
-  padding-top: 238px;
+  padding-left: 20px;
   margin-bottom: 110px;
-  position: relative;
+  background: #fff;
+  border-bottom-left-radius: 30px;
+  border-bottom-right-radius: 30px;
+  border-top-left-radius: 170px;
+  border-top-right-radius: 170px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+
+  @include max-width(328px);
 
   @media (max-width: 1450px) {
-    margin-left: 5px;
     margin-right: 5px;
+    margin-left: 5px;
   }
 
   &:nth-child(1) {
     .stock__item-title::before {
-      content: url('/src/img/gallery/stock/1.png');
       position: absolute;
-      left: 50%;
       bottom: 286px;
+      left: 50%;
+      content: url('/src/img/gallery/stock/1.png');
       transform: translateX(-50%);
     }
+
     background-image: url('/src/img/gallery/stock/bg-1.png');
-    background-repeat: no-repeat;
     background-position: center top;
+    background-repeat: no-repeat;
   }
 
   &:nth-child(2) {
     .stock__item-title::before {
-      content: url('/src/img/gallery/stock/2.png');
       position: absolute;
-      left: 50%;
       bottom: 286px;
+      left: 50%;
+      content: url('/src/img/gallery/stock/2.png');
       transform: translateX(-50%);
     }
+
     background-image: url('/src/img/gallery/stock/bg-2.png');
-    background-repeat: no-repeat;
     background-position: center top;
+    background-repeat: no-repeat;
   }
 
   &:nth-child(3) {
     .stock__item-title::before {
-      content: url('/src/img/gallery/stock/3.png');
       position: absolute;
-      left: 50%;
       bottom: 286px;
+      left: 50%;
+      content: url('/src/img/gallery/stock/3.png');
       transform: translateX(-50%);
     }
+
     background-image: url('/src/img/gallery/stock/bg-3.png');
-    background-repeat: no-repeat;
     background-position: center top;
+    background-repeat: no-repeat;
   }
 
   &:nth-child(4) {
     .stock__item-title::before {
-      content: url('/src/img/gallery/stock/4.png');
       position: absolute;
-      left: 50%;
       bottom: 286px;
+      left: 50%;
+      content: url('/src/img/gallery/stock/4.png');
       transform: translateX(-50%);
     }
+
     background-image: url('/src/img/gallery/stock/bg-4.png');
-    background-repeat: no-repeat;
     background-position: center top;
+    background-repeat: no-repeat;
   }
 
   &:nth-child(5) {
     .stock__item-title::before {
-      content: url('/src/img/gallery/stock/5.png');
       position: absolute;
-      left: 50%;
       bottom: 286px;
+      left: 50%;
+      content: url('/src/img/gallery/stock/5.png');
       transform: translateX(-50%);
     }
+
     background-image: url('/src/img/gallery/stock/bg-5.png');
-    background-repeat: no-repeat;
     background-position: center top;
+    background-repeat: no-repeat;
   }
 
   &:nth-child(6) {
     .stock__item-title::before {
-      content: url('/src/img/gallery/stock/6.png');
       position: absolute;
-      left: 50%;
       bottom: 286px;
+      left: 50%;
+      content: url('/src/img/gallery/stock/6.png');
       transform: translateX(-50%);
     }
+
     background-image: url('/src/img/gallery/stock/bg-6.png');
-    background-repeat: no-repeat;
     background-position: center top;
+    background-repeat: no-repeat;
   }
 
   &:nth-child(7) {
     .stock__item-title::before {
-      content: url('/src/img/gallery/stock/7.png');
       position: absolute;
-      left: 50%;
       bottom: 286px;
+      left: 50%;
+      content: url('/src/img/gallery/stock/7.png');
       transform: translateX(-50%);
     }
+
     background-image: url('/src/img/gallery/stock/bg-7.png');
-    background-repeat: no-repeat;
     background-position: center top;
+    background-repeat: no-repeat;
   }
 
   &:nth-child(8) {
     .stock__item-title::before {
-      content: url('/src/img/gallery/stock/08.png');
       position: absolute;
-      left: 50%;
       bottom: 286px;
+      left: 50%;
+      content: url('/src/img/gallery/stock/08.png');
       transform: translateX(-50%);
     }
+
     background-image: url('/src/img/gallery/stock/bg-8.png');
-    background-repeat: no-repeat;
     background-position: center top;
+    background-repeat: no-repeat;
   }
 }
 
 .stock__item-title {
-  font-weight: 500;
+  margin-bottom: 30px;
+  color: #105e3b;
   font-size: 24px;
+  font-weight: 500;
   line-height: 28px;
   text-align: center;
-  color: #105e3b;
-  margin-bottom: 30px;
 }
 
 .stock__item-row {
-  color: #4e4d4d;
-  @include main-bold;
   margin-bottom: 20px;
+  color: #4e4d4d;
+
+  @include main-bold;
 
   &:last-child {
     margin-bottom: 0;

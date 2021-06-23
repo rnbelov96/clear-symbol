@@ -101,7 +101,7 @@
                   id="line-form-phone"
                   type="text"
                   name="phone"
-                  placeholder="+7 (    ) ___ __ __"
+                  placeholder="+7 (___) ___ ____"
                   data-type="phone"
                   class="line-form__input"
                 />
@@ -273,7 +273,7 @@
                   id="modal-form-feedback-phone"
                   type="text"
                   name="phone"
-                  placeholder="+7 (    ) ___ __ __"
+                  placeholder="+7 (___) ___ ____"
                   data-type="phone"
                   class="modal-form__input"
                 />
@@ -435,7 +435,7 @@
                   id="modal-form-catalog-phone"
                   type="text"
                   name="phone"
-                  placeholder="+7 (    ) ___ __ __"
+                  placeholder="+7 (___) ___ ____"
                   data-type="phone"
                   class="modal-form__input"
                 />
@@ -473,6 +473,7 @@
 
       <section class="calc">
         <div class="container">
+          <img src="./img/bgs/calc-bg.png" class="calc__img">
           <h2 class="calc__title">
             Откройте несколько магазинов —
             <span>приумножьте прибыль бизнеса</span>
@@ -663,7 +664,7 @@
                   id="line-form-plan-phone"
                   type="text"
                   name="phone"
-                  placeholder="+7 (    ) ___ __ __"
+                  placeholder="+7 (___) ___ ____"
                   data-type="phone"
                   class="line-form__input"
                 />
@@ -875,7 +876,8 @@
             </h2>
             <form class="modal-form modal-form_city">
               <h3 class="modal-form__title">
-                Проверьте, свободен ли <br> ваш город
+                Проверьте, свободен ли <br />
+                ваш город
               </h3>
               <div class="modal-form__input-list">
                 <div class="modal-form__input-box">
@@ -900,7 +902,7 @@
                     id="modal-form-city-phone"
                     type="text"
                     name="phone"
-                    placeholder="+7 (    ) ___ __ __"
+                    placeholder="+7 (___) ___ ____"
                     data-type="phone"
                     class="modal-form__input"
                   />
@@ -937,6 +939,102 @@
       </section>
     </main>
 
+    <footer class="footer">
+      <div class="container">
+        <div class="footer__content">
+          <div class="footer__info-box">
+            <p class="footer__company-name">ООО «Символ Чистоты», 2021</p>
+            <address class="footer__address">
+              Нижний Новгород, ул. Коммунальная 1а
+            </address>
+          </div>
+          <button class="footer__policy js-policy">
+            Политика конфиденциальности
+          </button>
+          <div class="footer__contacts-box">
+            <a href="tel:+" class="footer__phone">8 (800) 000 00 00</a>
+            <div class="footer__link-list">
+              <a href="#" class="footer__link"></a
+              ><a href="#" class="footer__link"></a
+              ><a href="#" class="footer__link"></a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <div class="modal">
+      <div class="modal__center-wrapper">
+        <form class="modal-form modal-form_modal">
+          <h3 class="modal-form__title">
+            Отправьте заявку <span class="js-modal-form-title"></span>
+          </h3>
+          <div class="modal-form__input-list">
+            <div class="modal-form__input-box">
+              <label
+                for="modal-form-modal-name"
+                class="modal-form__input-label"
+                >Введите ваше имя</label
+              >
+              <input
+                id="modal-form-modal-name"
+                type="text"
+                name="name"
+                placeholder="Иван"
+                data-type="name"
+                class="modal-form__input"
+              />
+            </div>
+            <div class="modal-form__input-box">
+              <label
+                for="modal-form-modal-phone"
+                class="modal-form__input-label"
+                >Введите ваш телефон</label
+              >
+              <input
+                id="modal-form-modal-phone"
+                type="text"
+                name="phone"
+                placeholder="+7 (___) ___ ____"
+                data-type="phone"
+                class="modal-form__input"
+              />
+            </div>
+            <div class="modal-form__input-box">
+              <label
+                for="modal-form-modal-email"
+                class="modal-form__input-label"
+                >Введите ваш e-mail</label
+              >
+              <input
+                id="modal-form-modal-email"
+                type="text"
+                name="email"
+                placeholder="example@mail.ru"
+                data-type="email"
+                class="modal-form__input"
+              />
+            </div>
+            <button type="submit" class="button button_modal-form">
+              Оставить заявку
+            </button>
+          </div>
+          <p class="modal-form__policy-text">
+            Нажимая на кнопку «Оставить заявку», я даю согласие на
+            обработку персональных данных и соглашаюсь с
+            <button type="button" class="js-policy">
+              политикой конфиденциальности
+            </button>
+          </p>
+          <button
+            data-modal-close=""
+            class="modal__close"
+            title="Закрыть"
+            type="button"
+          ></button>
+        </form>
+      </div>
+    </div>
     <div class="modal">
       <div class="priv-policy priv-policy_modal">
         <h2 class="priv-policy__title">Политика конфиденциальности</h2>
@@ -1194,9 +1292,6 @@
           title="Закрыть"
         ></button>
       </div>
-    </div>
-    <div class="modal">
-      <div class="modal__center-wrapper"></div>
     </div>
   </body>
 </html>
