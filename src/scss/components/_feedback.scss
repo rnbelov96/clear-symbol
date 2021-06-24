@@ -9,6 +9,10 @@
 
   @include bg;
 
+  @media (min-width: 1920px) {
+    background-size: auto;
+  }
+
   @media (max-width: 1200px) {
     top: -320px;
     min-height: 1272px;

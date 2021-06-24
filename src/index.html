@@ -30,7 +30,8 @@
               Производство и сеть магазинов бытовой химии
             </p>
             <div class="header__contact-box">
-              <a href="tel:+" class="header__phone">8 (800) 000 00 00</a
+              <a href="tel:+78002349168" class="header__phone"
+                >8 (800) 234 91 68</a
               ><button class="header__callback js-callback">
                 (Бесплатная консультация)
               </button>
@@ -473,7 +474,7 @@
 
       <section class="calc">
         <div class="container">
-          <img src="./img/bgs/calc-bg.png" class="calc__img">
+          <img src="./img/bgs/calc-bg.png" class="calc__img" />
           <h2 class="calc__title">
             Откройте несколько магазинов —
             <span>приумножьте прибыль бизнеса</span>
@@ -540,12 +541,12 @@
                 min="20000"
                 max="80000"
                 step="20000"
-                class="calc__range-input js-range"
+                class="calc__range-input js-range js-rent-range"
               />
-              <div class="calc__endpoints">
+              <div class="calc__endpoints js-rent-endpoints">
                 <div class="calc__endpoint">20 000</div>
                 <div class="calc__endpoint">40 000</div>
-                <div class="calc__endpoint">60 000</div>
+                <div class="calc__endpoint calc__endpoint_active">60 000</div>
                 <div class="calc__endpoint">80 000</div>
               </div>
             </li>
@@ -555,17 +556,17 @@
               </p>
               <input
                 type="range"
-                min="200000"
-                max="600000"
-                step="100000"
-                class="calc__range-input js-range"
+                min="350000"
+                max="550000"
+                step="50000"
+                class="calc__range-input js-range js-shop-income-range"
               />
-              <div class="calc__endpoints">
-                <div class="calc__endpoint">250 000</div>
-                <div class="calc__endpoint">300 000</div>
+              <div class="calc__endpoints js-shop-income-endpoints">
+                <div class="calc__endpoint">350 000</div>
                 <div class="calc__endpoint">400 000</div>
+                <div class="calc__endpoint calc__endpoint_active">450 000</div>
                 <div class="calc__endpoint">500 000</div>
-                <div class="calc__endpoint">600 000</div>
+                <div class="calc__endpoint">550 000</div>
               </div>
             </li>
             <li class="calc__item">
@@ -575,12 +576,12 @@
                 min="20000"
                 max="80000"
                 step="20000"
-                class="calc__range-input js-range"
+                class="calc__range-input js-range js-rest-waste-range"
               />
-              <div class="calc__endpoints">
+              <div class="calc__endpoints js-rest-waste-endpoints">
                 <div class="calc__endpoint">20 000</div>
                 <div class="calc__endpoint">40 000</div>
-                <div class="calc__endpoint">60 000</div>
+                <div class="calc__endpoint calc__endpoint_active">60 000</div>
                 <div class="calc__endpoint">80 000</div>
               </div>
             </li>
@@ -591,19 +592,19 @@
                 min="20000"
                 max="100000"
                 step="20000"
-                class="calc__range-input js-range"
+                class="calc__range-input js-range js-eShop-income-range"
               />
-              <div class="calc__endpoints">
+              <div class="calc__endpoints js-eShop-income-endpoints">
                 <div class="calc__endpoint">20 000</div>
                 <div class="calc__endpoint">40 000</div>
-                <div class="calc__endpoint">60 000</div>
+                <div class="calc__endpoint calc__endpoint_active">60 000</div>
                 <div class="calc__endpoint">80 000</div>
                 <div class="calc__endpoint">100 000</div>
               </div>
             </li>
             <li class="calc__item">
               <p class="calc__item-title">Фонд оплаты труда, руб.</p>
-              <p class="calc__waste">35 000</p>
+              <p class="calc__waste js-work-payment"></p>
             </li>
             <li class="calc__item">
               <p class="calc__item-title">Выручка от оптовых продаж, руб.</p>
@@ -612,18 +613,18 @@
                 min="50000"
                 max="200000"
                 step="50000"
-                class="calc__range-input js-range"
+                class="calc__range-input js-range js-opt-income-range"
               />
-              <div class="calc__endpoints">
+              <div class="calc__endpoints js-opt-income-endpoints">
                 <div class="calc__endpoint">50 000</div>
                 <div class="calc__endpoint">100 000</div>
-                <div class="calc__endpoint">150 000</div>
+                <div class="calc__endpoint calc__endpoint_active">150 000</div>
                 <div class="calc__endpoint">200 000</div>
               </div>
             </li>
             <li class="calc__item">
               <p class="calc__item-title">Расходы суммарно, руб.</p>
-              <p class="calc__waste">115 000</p>
+              <p class="calc__waste js-total-waste">115 000</p>
             </li>
           </ul>
           <div class="calc__result-box">
@@ -952,7 +953,9 @@
             Политика конфиденциальности
           </button>
           <div class="footer__contacts-box">
-            <a href="tel:+" class="footer__phone">8 (800) 000 00 00</a>
+            <a href="tel:+78002349168" class="footer__phone"
+              >8 (800) 234 91 68</a
+            >
             <div class="footer__link-list">
               <a href="#" class="footer__link"></a
               ><a href="#" class="footer__link"></a
@@ -971,9 +974,7 @@
           </h3>
           <div class="modal-form__input-list">
             <div class="modal-form__input-box">
-              <label
-                for="modal-form-modal-name"
-                class="modal-form__input-label"
+              <label for="modal-form-modal-name" class="modal-form__input-label"
                 >Введите ваше имя</label
               >
               <input
@@ -1020,8 +1021,8 @@
             </button>
           </div>
           <p class="modal-form__policy-text">
-            Нажимая на кнопку «Оставить заявку», я даю согласие на
-            обработку персональных данных и соглашаюсь с
+            Нажимая на кнопку «Оставить заявку», я даю согласие на обработку
+            персональных данных и соглашаюсь с
             <button type="button" class="js-policy">
               политикой конфиденциальности
             </button>
@@ -1056,8 +1057,9 @@
           <li class="priv-policy__item">
             2. Настоящая политика Оператора в отношении обработки персональных
             данных (далее – Политика) применяется ко всей информации, которую
-            Оператор может получить о посетителях веб-сайта компании «СИМВОЛ
-            ЧИСТОТЫ».
+            Оператор может получить о посетителях веб-сайта компании ООО «Символ
+            Чистоты», находящихся по адресу г. Нижний Новгород, ул. Коммунальная
+            1а.
           </li>
         </ol>
 
@@ -1183,8 +1185,8 @@
             новых продуктах и услугах, специальных предложениях и различных
             событиях. Пользователь всегда может отказаться от получения
             информационных сообщений, направив Оператору письмо на адрес
-            электронной почты с доменом hotchicken18@yandex.ru с пометкой «Отказ
-            от уведомлений о новых продуктах и услугах и специальных
+            электронной почты с доменом marketing@simvol-chistoty.biz с пометкой
+            «Отказ от уведомлений о новых продуктах и услугах и специальных
             предложениях».
           </li>
           <li class="priv-policy__item">

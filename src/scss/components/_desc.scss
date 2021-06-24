@@ -6,6 +6,10 @@
 
   @include bg;
 
+  @media (min-width: 1920px) {
+    background-size: auto;
+  }
+
   @media (max-width: 1200px) {
     min-height: auto;
     padding-bottom: 30px;

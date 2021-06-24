@@ -207,6 +207,7 @@
   }
 
   &_active {
+    @include main-bold;
     color: #3e7333;
   }
 }
