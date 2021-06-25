@@ -14,7 +14,7 @@
   align-items: center;
   justify-content: space-between;
 
-  @media (max-width: 850px) {
+  @media (max-width: 900px) {
     flex-direction: column;
     justify-content: center;
   }
@@ -36,7 +36,7 @@
   font-weight: 300;
   line-height: 32px;
 
-  @media (max-width: 850px) {
+  @media (max-width: 900px) {
     margin-bottom: 20px;
   }
 
@@ -54,7 +54,7 @@
   line-height: normal;
   text-decoration: underline;
 
-  @media (max-width: 850px) {
+  @media (max-width: 900px) {
     margin-bottom: 20px;
   }
 }
