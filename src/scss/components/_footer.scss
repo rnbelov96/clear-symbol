@@ -22,12 +22,9 @@
 
 .footer__company-name {
   @include main-bold;
+  text-align: center;
 
   margin-bottom: 5px;
-
-  @media (max-width: 900px) {
-    text-align: center;
-  }
 
   @media (max-width: 575px) {
     font-size: 20px;
