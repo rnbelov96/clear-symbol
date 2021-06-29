@@ -42,7 +42,7 @@ const validateForm = form => {
     if (nameInputEl) {
       localStorage.setItem('userName', nameInputEl.value);
     } else {
-      localStorage.setItem('userName', '');
+      localStorage.setItem('userName', 'Гость');
     }
 
     return true;

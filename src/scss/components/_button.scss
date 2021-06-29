@@ -55,6 +55,17 @@
     @include max-width(448px);
   }
 
+  &_present {
+    display: none;
+    margin-left: auto;
+    margin-right: auto;
+    @include max-width(328px);
+    margin-bottom: 20px;
+    @media (max-width: 575px) {
+      display: block;
+    }
+  }
+
   &::after {
     content: '';
     margin-left: 60px;

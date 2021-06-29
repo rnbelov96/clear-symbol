@@ -8,6 +8,9 @@ const modalFormInfoList = [
   {
     title: 'и получите подробный план открытия',
   },
+  {
+    title: 'на презентацию франшизы и финансовую модель',
+  },
 ];
 
 const closeModal = (modalEl: HTMLDivElement) => {
@@ -69,6 +72,7 @@ policyBtnElList.forEach(el => {
 
 const callbackBtnElList = document.querySelectorAll('.js-callback');
 const planBtnElList = document.querySelectorAll('.js-plan');
+const presentBtnElList = document.querySelectorAll('.js-present');
 
 callbackBtnElList.forEach(btn => {
   btn.addEventListener('click', () => {
@@ -79,6 +83,12 @@ callbackBtnElList.forEach(btn => {
 planBtnElList.forEach(btn => {
   btn.addEventListener('click', () => {
     formTitleEl.textContent = modalFormInfoList[1].title;
+    openModal(formModalEl as HTMLDivElement);
+  });
+});
+presentBtnElList.forEach(btn => {
+  btn.addEventListener('click', () => {
+    formTitleEl.textContent = modalFormInfoList[2].title;
     openModal(formModalEl as HTMLDivElement);
   });
 });

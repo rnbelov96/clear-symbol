@@ -8,6 +8,12 @@
     top: 0;
     margin-bottom: 0;
   }
+
+  &_top {
+    @media (max-width: 575px) {
+      display: none;
+    }
+  }
 }
 
 .line-form__form {

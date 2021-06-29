@@ -150,6 +150,10 @@
   background-color: #e5e5e5;
   border-radius: 4px;
 
+  &:focus {
+    outline: none;
+  }
+
   &::-webkit-slider-thumb {
     width: 33px;
     height: 33px;
@@ -161,6 +165,7 @@
     &:hover,
     &:focus {
       transform: scale(1.1);
+      outline: none;
     }
   }
 
@@ -175,6 +180,7 @@
     &:hover,
     &:focus {
       transform: scale(1.1);
+      outline: none;
     }
   }
 
@@ -188,6 +194,7 @@
     &:hover,
     &:focus {
       transform: scale(1.1);
+      outline: none;
     }
   }
 }

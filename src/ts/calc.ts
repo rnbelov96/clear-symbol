@@ -1,38 +1,54 @@
-import { debug } from "webpack";
-
 /* eslint-disable no-param-reassign */
 export {};
 
 const leftColor = '#4aa016';
 const rightColor = '#e5e5e5';
 
+const shopAmountLabelList = [
+  'одного магазина',
+  'двух магазинов',
+  'трех магазинов',
+  'четырех магазинов',
+  'пяти магазинов',
+];
+
+const shopAmountLabelEl = document.querySelector('.js-shop-amount-label') as HTMLSpanElement;
+
 const rangeElList = document.querySelectorAll('.js-range');
 
-const rentRange = document.querySelector(
-  '.js-rent-range',
-) as HTMLInputElement;
+const rentRange = document.querySelector('.js-rent-range') as HTMLInputElement;
 const shopIncomeRange = document.querySelector(
   '.js-shop-income-range',
 ) as HTMLInputElement;
 const restWasteRange = document.querySelector(
   '.js-rest-waste-range',
 ) as HTMLInputElement;
-const eShopIncomeRange = document.querySelector('.js-eShop-income-range') as HTMLInputElement;
+const eShopIncomeRange = document.querySelector(
+  '.js-eShop-income-range',
+) as HTMLInputElement;
 const optIncomeRange = document.querySelector(
   '.js-opt-income-range',
 ) as HTMLInputElement;
 
-const rentEndpoints = document.querySelector('.js-rent-endpoints') as HTMLDivElement;
-const shopIncomeEndpoints = document.querySelector('.js-shop-income-endpoints') as HTMLDivElement;
-const restWasteEndpoints = document.querySelector('.js-rest-waste-endpoints') as HTMLDivElement;
-const eShopIncomeEndpoints = document.querySelector('.js-eShop-income-endpoints') as HTMLDivElement;
-const optIncomeEndpoints = document.querySelector('.js-opt-income-endpoints') as HTMLDivElement;
+const rentEndpoints = document.querySelector(
+  '.js-rent-endpoints',
+) as HTMLDivElement;
+const shopIncomeEndpoints = document.querySelector(
+  '.js-shop-income-endpoints',
+) as HTMLDivElement;
+const restWasteEndpoints = document.querySelector(
+  '.js-rest-waste-endpoints',
+) as HTMLDivElement;
+const eShopIncomeEndpoints = document.querySelector(
+  '.js-eShop-income-endpoints',
+) as HTMLDivElement;
+const optIncomeEndpoints = document.querySelector(
+  '.js-opt-income-endpoints',
+) as HTMLDivElement;
 
 let currentShopAmount = 1;
 
-const calcResultLabelEl = document.querySelector(
-  '.js-calc-result',
-) as HTMLSpanElement;
+const calcResultLabelElList = document.querySelectorAll('.js-calc-result');
 const workPaymentLabelEl = document.querySelector(
   '.js-work-payment',
 ) as HTMLSpanElement;
@@ -51,25 +67,37 @@ let eShopIncomeCurrentStep = 2;
 let optIncomeCurrentStep = 2;
 
 const calcWorkPayment = () => {
-  workPayment = (750 * 30 + (Number(shopIncomeRange.value) + Number(eShopIncomeRange.value)) * 0.05);
-  workPaymentLabelEl.textContent = (workPayment * currentShopAmount).toLocaleString();
+  workPayment = 750 * 30
+    + (Number(shopIncomeRange.value) + Number(eShopIncomeRange.value)) * 0.05;
+  workPaymentLabelEl.textContent = (
+    workPayment * currentShopAmount
+  ).toLocaleString();
   return workPayment;
 };
 
 const calcTotalWaste = () => {
-  totalWaste = Number(restWasteRange.value) + Number(rentRange.value) + calcWorkPayment() + (Number(shopIncomeRange.value) + Number(eShopIncomeRange.value) + Number(optIncomeRange.value)) * 0.513;
-  totalWasteLabelEl.textContent = (totalWaste * currentShopAmount).toLocaleString();
+  totalWaste = Number(restWasteRange.value)
+    + Number(rentRange.value)
+    + calcWorkPayment()
+    + (Number(shopIncomeRange.value)
+      + Number(eShopIncomeRange.value)
+      + Number(optIncomeRange.value))
+      * 0.513;
+  totalWasteLabelEl.textContent = (
+    totalWaste * currentShopAmount
+  ).toLocaleString();
   return totalWaste;
 };
 
 const calcResult = () => {
   result = (Number(shopIncomeRange.value)
-    + Number(eShopIncomeRange.value)
-    + Number(optIncomeRange.value)
-    - calcTotalWaste()
-  )
+      + Number(eShopIncomeRange.value)
+      + Number(optIncomeRange.value)
+      - calcTotalWaste())
     * currentShopAmount;
-  calcResultLabelEl.textContent = result.toLocaleString();
+  calcResultLabelElList.forEach(el => {
+    el.textContent = result.toLocaleString();
+  });
 };
 
 calcResult();
@@ -82,6 +110,8 @@ radioListContainerEl?.addEventListener('click', (e: Event) => {
   }
 
   currentShopAmount = Number((clickedElement as HTMLInputElement).value);
+
+  shopAmountLabelEl.textContent = shopAmountLabelList[currentShopAmount - 1];
 
   calcResult();
 });
@@ -110,7 +140,9 @@ rentRange.addEventListener('input', e => {
   [...rentEndpoints.children].forEach(endpoint => {
     endpoint.classList.remove('calc__endpoint_active');
   });
-  rentEndpoints.children[rentCurrentStep].classList.add('calc__endpoint_active');
+  rentEndpoints.children[rentCurrentStep].classList.add(
+    'calc__endpoint_active',
+  );
 
   rangeEl.style.background = `linear-gradient(to right, ${leftColor} 0%, ${leftColor} ${String(
     (rentCurrentStep / steps) * 100,
@@ -131,7 +163,9 @@ shopIncomeRange.addEventListener('input', e => {
   [...shopIncomeEndpoints.children].forEach(endpoint => {
     endpoint.classList.remove('calc__endpoint_active');
   });
-  shopIncomeEndpoints.children[shopIncomeCurrentStep].classList.add('calc__endpoint_active');
+  shopIncomeEndpoints.children[shopIncomeCurrentStep].classList.add(
+    'calc__endpoint_active',
+  );
 
   rangeEl.style.background = `linear-gradient(to right, ${leftColor} 0%, ${leftColor} ${String(
     (shopIncomeCurrentStep / steps) * 100,
@@ -152,7 +186,9 @@ restWasteRange.addEventListener('input', e => {
   [...restWasteEndpoints.children].forEach(endpoint => {
     endpoint.classList.remove('calc__endpoint_active');
   });
-  restWasteEndpoints.children[restWasteCurrentStep].classList.add('calc__endpoint_active');
+  restWasteEndpoints.children[restWasteCurrentStep].classList.add(
+    'calc__endpoint_active',
+  );
 
   rangeEl.style.background = `linear-gradient(to right, ${leftColor} 0%, ${leftColor} ${String(
     (restWasteCurrentStep / steps) * 100,
@@ -173,7 +209,9 @@ eShopIncomeRange.addEventListener('input', e => {
   [...eShopIncomeEndpoints.children].forEach(endpoint => {
     endpoint.classList.remove('calc__endpoint_active');
   });
-  eShopIncomeEndpoints.children[eShopIncomeCurrentStep].classList.add('calc__endpoint_active');
+  eShopIncomeEndpoints.children[eShopIncomeCurrentStep].classList.add(
+    'calc__endpoint_active',
+  );
 
   rangeEl.style.background = `linear-gradient(to right, ${leftColor} 0%, ${leftColor} ${String(
     (eShopIncomeCurrentStep / steps) * 100,
@@ -194,7 +232,9 @@ optIncomeRange.addEventListener('input', e => {
   [...optIncomeEndpoints.children].forEach(endpoint => {
     endpoint.classList.remove('calc__endpoint_active');
   });
-  optIncomeEndpoints.children[optIncomeCurrentStep].classList.add('calc__endpoint_active');
+  optIncomeEndpoints.children[optIncomeCurrentStep].classList.add(
+    'calc__endpoint_active',
+  );
 
   rangeEl.style.background = `linear-gradient(to right, ${leftColor} 0%, ${leftColor} ${String(
     (optIncomeCurrentStep / steps) * 100,
