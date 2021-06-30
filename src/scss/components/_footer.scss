@@ -22,9 +22,13 @@
 
 .footer__company-name {
   @include main-bold;
-  text-align: center;
+  text-align: left;
 
   margin-bottom: 5px;
+
+  @media (max-width: 900px) {
+    text-align: center;
+  }
 
   @media (max-width: 575px) {
     font-size: 20px;
@@ -67,7 +71,6 @@
 }
 
 .footer__phone {
-  margin-bottom: 8px;
   color: white;
 
   @include main-bold;
@@ -77,27 +80,5 @@
   &:active {
     color: white;
     text-decoration: underline;
-  }
-}
-
-.footer__link-list {
-  display: flex;
-  justify-content: space-between;
-}
-
-.footer__link {
-  width: 32px;
-  height: 32px;
-
-  &:nth-child(1) {
-    background-image: url('/src/img/icons/insta.svg');
-  }
-
-  &:nth-child(2) {
-    background-image: url('/src/img/icons/vk.svg');
-  }
-
-  &:nth-child(3) {
-    background-image: url('/src/img/icons/facebook.svg');
   }
 }

@@ -104,8 +104,10 @@
   opacity: 0.5;
 
   &:focus,
-  &:hover {
+  &:hover,
+  &:active {
     opacity: 1;
+    outline: none;
   }
 }
 
@@ -123,6 +125,12 @@
 
   button {
     @include reset-btn;
+
+    &:focus,
+    &:hover,
+    &:active {
+      outline: none;
+    }
 
     color: #c6c6c6;
     text-decoration: underline;

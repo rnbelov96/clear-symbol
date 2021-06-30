@@ -7,6 +7,10 @@
 
 .header__logo {
   margin-bottom: 10px;
+
+  @media (max-width: 575px) {
+    margin-bottom: 0;
+  }
 }
 
 .header__text {
@@ -49,6 +53,12 @@
   color: #4e4d4d;
   font-size: 18px;
   font-weight: 300;
+
+  &:hover,
+  &:focus,
+  &:active {
+    outline: none;
+  }
 }
 
 .header__phone-icon {
@@ -56,6 +66,8 @@
   width: 32px;
   height: 32px;
   background-image: url('/src/img/icons/phone.png');
+  position: relative;
+  top: -5px;
 
   @media (max-width: 575px) {
     display: block;

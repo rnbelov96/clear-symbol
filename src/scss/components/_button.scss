@@ -17,12 +17,14 @@
   &:hover,
   &:focus {
     background: #d52a86;
+    outline: none;
   }
 
   &:active {
     position: relative;
     top: 6px;
     box-shadow: none;
+    outline: none;
   }
 
   @media (max-width: 575px) {
