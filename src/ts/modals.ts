@@ -4,12 +4,15 @@ export {};
 const modalFormInfoList = [
   {
     title: 'на бесплатную консультацию',
+    button: 'Отправить заявку',
   },
   {
     title: 'и получите подробный план открытия',
+    button: 'Получить план',
   },
   {
     title: 'на презентацию франшизы и финансовую модель',
+    button: 'Получить презентацию',
   },
 ];
 
@@ -33,6 +36,7 @@ const [formModalEl, policyModalEl] = modalElList;
 const formTitleEl = formModalEl.querySelector(
   '.js-modal-form-title',
 ) as HTMLHeadingElement;
+const formBtnLabelElList = formModalEl.querySelectorAll('.js-modal-form-btn-label');
 
 const modalWrapperElList = document.querySelectorAll('.modal__center-wrapper');
 modalElList.forEach(modalEl => {
@@ -77,18 +81,27 @@ const presentBtnElList = document.querySelectorAll('.js-present');
 callbackBtnElList.forEach(btn => {
   btn.addEventListener('click', () => {
     formTitleEl.textContent = modalFormInfoList[0].title;
+    formBtnLabelElList.forEach(el => {
+      el.textContent = modalFormInfoList[0].button;
+    });
     openModal(formModalEl as HTMLDivElement);
   });
 });
 planBtnElList.forEach(btn => {
   btn.addEventListener('click', () => {
     formTitleEl.textContent = modalFormInfoList[1].title;
+    formBtnLabelElList.forEach(el => {
+      el.textContent = modalFormInfoList[1].button;
+    });
     openModal(formModalEl as HTMLDivElement);
   });
 });
 presentBtnElList.forEach(btn => {
   btn.addEventListener('click', () => {
     formTitleEl.textContent = modalFormInfoList[2].title;
+    formBtnLabelElList.forEach(el => {
+      el.textContent = modalFormInfoList[2].button;
+    });
     openModal(formModalEl as HTMLDivElement);
   });
 });

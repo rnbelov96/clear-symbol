@@ -147,6 +147,10 @@ document.addEventListener('DOMContentLoaded', () => {
         ...objectifyForm([...new FormData(form).entries()]),
       };
 
+      fetch(
+        `welcomemail.php?name=${document.formData.name}&email=${document.formData.email}`,
+      ).then(data => data.text().then(text => console.log(text)));
+
       if (document.formData.name === undefined) document.formData.name = window.location.hostname;
 
       const data = JSON.stringify(document.formData);
