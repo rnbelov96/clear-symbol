@@ -3,4 +3,8 @@
   background-image: url('/src/img/bgs/catalog-bg.png');
   background-position: center bottom;
   background-repeat: no-repeat;
+
+  @media (max-width: 575px) {
+    background-image: url('/src/img/bgs/catalog-bg.webp');
+  }
 }

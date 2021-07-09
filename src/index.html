@@ -19,17 +19,6 @@
     </script>
     <noscript><div><img src="https://mc.yandex.ru/watch/82291789" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
     <!-- /Yandex.Metrika counter -->
-    <script
-      src="https://cdnjs.cloudflare.com/ajax/libs/validator/13.5.2/validator.min.js"
-      integrity="sha512-vZEoK8xRncku4g5GANHh5zobUjeCMbZkSEahrADeAcRlk/1Ignf8sAKojkV4RZLkPw145+ILJFisI2pnjsPtGQ=="
-      crossorigin="anonymous"
-    ></script>
-    <script
-      src="https://cdnjs.cloudflare.com/ajax/libs/imask/6.0.7/imask.min.js"
-      integrity="sha512-qCt/OTd55ilhuXLRNAp/G8uONXUrpFoDWsXDtyjV4wMbvh46dOEjvHZyWkvnffc6I2g/WHSKsaFUCm0RISxnzQ=="
-      crossorigin="anonymous"
-    ></script>
-    <script src="https://api-maps.yandex.ru/2.0-stable/?load=package.map&lang=ru-RU"></script>
   </head>
   <body>
     <main>
@@ -724,11 +713,11 @@
           <h2 class="owner__title">Повторите <span>наш успех</span></h2>
           <div class="owner__box">
             <div class="owner__left-side">
-              <img
-                src="./img/owner.png"
-                alt="Сооснователь и идейный лидер компании Символ Чистоты"
-                class="owner__img"
-              />
+              <picture class="owner__img">
+                <source type="image/webp" srcset="./img/owner.webp">
+                <source type="image/png" srcset="./img/owner.png">
+                <img src="./img/owner.webp" alt="Сооснователь и идейный лидер компании Символ Чистоты">
+               </picture>
               <p class="owner__name">Юлия Десяткова</p>
               <p class="owner__caption">
                 Сооснователь и идейный лидер <br />
@@ -1313,5 +1302,16 @@
         ></button>
       </div>
     </div>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/validator/13.5.2/validator.min.js"
+      integrity="sha512-vZEoK8xRncku4g5GANHh5zobUjeCMbZkSEahrADeAcRlk/1Ignf8sAKojkV4RZLkPw145+ILJFisI2pnjsPtGQ=="
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/imask/6.0.7/imask.min.js"
+      integrity="sha512-qCt/OTd55ilhuXLRNAp/G8uONXUrpFoDWsXDtyjV4wMbvh46dOEjvHZyWkvnffc6I2g/WHSKsaFUCm0RISxnzQ=="
+      crossorigin="anonymous"
+    ></script>
+    <script src="https://api-maps.yandex.ru/2.0-stable/?load=package.map&lang=ru-RU"></script>
   </body>
 </html>

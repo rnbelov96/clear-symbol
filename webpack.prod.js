@@ -32,7 +32,12 @@ module.exports = merge(common, {
               name: 'images/[hash].[ext]',
             },
           },
-          'image-webpack-loader',
+          {
+            loader: 'image-webpack-loader',
+            options: {
+              webp:{ quality: 75 }
+            }
+          },
         ],
       },
     ],
