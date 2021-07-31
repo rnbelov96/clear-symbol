@@ -17,7 +17,12 @@ formsList.forEach(form => {
         mask: '+7 (000) 000 0000',
         lazy: false,
       });
+      phoneInputEl.selectionStart = 4;
+      phoneInputEl.selectionEnd = 4;
     }
+    const stringEnd = phoneInputEl.value.indexOf('_');
+    phoneInputEl.selectionStart = stringEnd;
+    phoneInputEl.selectionEnd = stringEnd;
   });
   phoneInputEl.addEventListener('blur', e => {
     const inputEl = e.currentTarget as HTMLInputElement;
